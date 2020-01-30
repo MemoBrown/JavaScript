@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Clase 40</title>
+</head>
+<body>
+  <script>
+
+    const gaby = {
+      nombre: 'Gabriela',
+      apellido: 'Quezada'
+    }
+
+    const memo = {
+      nombre: 'Guillermo',
+      apellido: 'Moreno'
+    }
+
+
+    function saludar() {
+      console.log(`Hola, mi nombre es ${this.nombre}`)
+    }
+
+    // const saludarAMemo = saludar.bind(memo)
+    // const saludarAGaby = saludar.bind(gaby)
+
+    setTimeout(saludar.bind(memo), 1000)
+
+  </script>
+</body>
+</html>

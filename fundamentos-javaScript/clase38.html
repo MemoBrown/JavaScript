@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="UTF-8">
+  <title>Clase 38</title>
+</head>
+<body>
+  <script>
+    function crearSaludo(finalDeFrase){
+      return function (nombre){
+        console.log(`Hola ${nombre} ${finalDeFrase}`)
+      }
+    }
+
+    const saludoMexicano = crearSaludo('wey')
+    const saludoArgentino = crearSaludo('che')
+    const saludoColombiano = crearSaludo('amigo')
+
+    saludoMexicano('Memo')
+    saludoArgentino('Memo')
+    saludoColombiano('Memo')
+
+  </script>
+</body>
+</html>
