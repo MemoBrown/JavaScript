@@ -9,11 +9,11 @@
     <a href="/ejercicios/">Go back</a>
     <p><em>Abre la consola</em></p>
 
-    <!-- <ul>
+    <ul>
       <li><button class="call-to-action">Aprender</button></li>
       <li><button class="call-to-action">Aprender Más</button></li>
       <li><button class="call-to-action">¡Nunca parar de Aprender!</button></li>
-    </ul> -->
+    </ul>
 
     <script>
       // Establece `this` usando `call`
@@ -36,12 +36,27 @@
       // Establece `this` usando `apply` y pasar argumentos a la función
       const valores = [800, 'noreste'];
       caminar.apply(memo, valores);
-
       // call - comma
       // apply - arreglo
 
       // Establecer `this` en una nueva función usando `bind`
+      const gaby = { name: 'Gabriela', lastName: 'Quezada' }
+      const gabySaluda = saludar.bind(gaby);
+      gabySaluda();
+
+      const gabyCamina = caminar.bind(gaby, 2000);
+      gabyCamina('oeste');
       // Cuándo es útil usar uno de estos métodos
+      const buttons = document.getElementsByClassName('call-to-action');
+      // buttons.forEach(button => {
+      //   button.onclick = () => alert('Nunca pares de aprender')
+      // })
+
+      // NodeList
+      Array.prototype.forEach.call(buttons, button => {
+        button.onclick = () => alert('Nunca pares de aprender')
+      });
+
     </script>
   </body>
 </html>
