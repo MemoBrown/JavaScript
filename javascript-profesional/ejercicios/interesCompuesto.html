@@ -1,0 +1,28 @@
+<html>
+  <head>
+    <title>Proyeccion de 10 años</title>
+    <meta charset="UTF-8"> 
+    <style>
+      body{
+        font-family: Arial;
+      }
+    </style>
+  </head>
+
+  <body>
+    <script>
+      let ventaMensual = 1000;
+      let porcentajeInteres = .10;
+      let interes = ventaMensual * porcentajeInteres;
+      let total = ventaMensual + interes;
+      let meses;
+      let totalMeses = 121;
+      for(let meses = 0; meses < totalMeses; meses++){
+        if(meses <= 120){
+          console.log(total * meses)
+        }
+      }
+    </script>
+  </body>
+</html>
+<!-- prompt('¿Cuanto vendes al mes?'); -->
