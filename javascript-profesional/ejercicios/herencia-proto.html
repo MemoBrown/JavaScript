@@ -1,0 +1,46 @@
+<html>
+  <head>
+    <title>Prototype</title>
+  </head>
+
+  <body>
+    <a href="C:\Users\guill\OneDrive\Escritorio\Escuela_JavaScript\javascript-profesional\ejercicios\">Go back</a>
+    <p><em>Abre la consola</em></p>
+
+    <p><code>SomeObject.prototype</code> es un objeto donde definimos 
+    el prototipo de las instancias de <code>SomeObject</code>. Es decir, las instancias
+    de <code>SomeObject</code> van a "heredar" de <code>SomeObject.prototype</code>.</p>
+
+    <p><code>SomeObject.[[Prototype]]</code> es el prototipo de 
+    <code>SomeObject</code>. Es decir, <code>SomeObject</code> "hereda" de 
+    <code>SomeObject.prototype</code>.</p>
+    <script>
+      function Hero (name){
+        this.name = name
+      }
+
+      Hero.prototype.saludar = function() {
+           console.log(`Yo soy ${this.name}`)
+        };
+
+      const batman = new Hero('Batman')
+      
+      // propiedades de la instancia
+      console.log('Name: ', batman.name)
+
+      //propiedades de la "clase"
+      console.log('Saludar: ', batman.saludar)
+
+      //propiedades heredadas ej: toString
+      console.log('toString: ', batman.toString)
+
+      //hasOnProperty (de donde sale toString o esto?)
+      console.log(
+        'batman.hasOwnProperty("saludar"):',
+         batman.hasOwnProperty('saludar'))
+
+
+
+    </script>
+  </body>
+</html>
